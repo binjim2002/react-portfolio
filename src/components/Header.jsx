@@ -5,14 +5,14 @@ import Nav from 'react-bootstrap/Nav'
 const Header = () => {
     return (
         <Navbar bg="light">
-            <Navbar.Brand href="/">Jimmy B. Kazadi</Navbar.Brand>
+            <Navbar.Brand href={`${process.env.PUBLIC_URL}/`}>Jimmy B. Kazadi</Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse>
                 <Nav></Nav>
                 <Nav >
-                    <Nav.Link href="/contact">Contact</Nav.Link>
-                    <Nav.Link href="/project">Project</Nav.Link>
-                    <Nav.Link href="/resume">Resume</Nav.Link>
+                    <Nav.Link href={`${process.env.PUBLIC_URL}/contact`}>Contact</Nav.Link>
+                    <Nav.Link href={`${process.env.PUBLIC_URL}/project`}>Project</Nav.Link>
+                    <Nav.Link href={`${process.env.PUBLIC_URL}/resume`}>Resume</Nav.Link>
 
                     
                 </Nav>

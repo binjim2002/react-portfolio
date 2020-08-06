@@ -14,19 +14,20 @@ function App() {
   return (
    <div>
      
-     <Router basename="/react-portfolio/">
+     <Router basename="/react-portfolio">
+      
         <Header/>
         <Switch>
-          <Route path="/" exact>
+          <Route path={`/`} exact>
             <Home/>
           </Route>
-          <Route path="/contact">
+          <Route path={`/contact`}>
             <Contact/>
           </Route>
-          <Route path="/project">
+          <Route path={`/project`}>
             <Project/>
           </Route>
-          <Route path="/resume">
+          <Route path={`/resume`}>
             <Resume/>
           </Route>
         </Switch>
