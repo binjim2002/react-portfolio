@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav'
+import Nav from 'react-bootstrap/Nav';
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => {
     return (
@@ -10,10 +11,16 @@ const Header = () => {
             <Navbar.Collapse>
                 <Nav></Nav>
                 <Nav >
-                    <Nav.Link href={`${process.env.PUBLIC_URL}/contact`}>Contact</Nav.Link>
-                    <Nav.Link href={`${process.env.PUBLIC_URL}/project`}>Project</Nav.Link>
-                    <Nav.Link href={`${process.env.PUBLIC_URL}/resume`}>Resume</Nav.Link>
-
+                    <LinkContainer to="/contact">
+                        <Nav.Link href={`${process.env.PUBLIC_URL}/contact`}>Contact</Nav.Link>
+                    </LinkContainer>   
+                    <LinkContainer to="/project">
+                        <Nav.Link href={`${process.env.PUBLIC_URL}/project`}>Project</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/resume">
+                        <Nav.Link href={`${process.env.PUBLIC_URL}/resume`}>Resume</Nav.Link>
+                    </LinkContainer>
+                   
                     
                 </Nav>
             </Navbar.Collapse>
