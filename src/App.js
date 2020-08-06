@@ -14,7 +14,7 @@ function App() {
   return (
    <div>
      
-     <Router>
+     <Router basename="/react-portfolio/">
         <Header/>
         <Switch>
           <Route path="/" exact>
